@@ -1,21 +1,23 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
-body{
-   
-    font-size: 13px;
-    display: flex;
-    flex-direction: column;
-}
+
 html{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 11px;
 }
+
+body{
+    font-size: 13px;
+    display: flex;
+    flex-direction: column;
+}
 nav{
     width: 100%;
-
 }
+
 menu{
     width: 100%;
     background-color: rgb(115, 0, 255);
@@ -24,23 +26,54 @@ menu{
     align-items: center;
     padding: 9px;
 }
+
 menu ul{
     display: flex;
+    flex-wrap: wrap; 
 }
+
 menu ul li{
     list-style: none;
 }
+
 menu ul li a{
     color: whitesmoke;
-    padding: 21px;
+    padding: 15px 20px;
     text-decoration: none;
+    display: block;
 }
+
 menu ul li a:hover{
     background-color: whitesmoke;
     color: black;
-    padding: 21px;
 }
+
 input{
     padding: 5px;
     border-radius: 5px;
+}
+
+
+@media (max-width: 600px){
+    menu{
+        flex-direction: column;
+        padding: 5px;
+    }
+
+    menu ul{
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
+
+    menu ul li a{
+        padding: 12px;
+        width: 100%;
+        text-align: center;
+    }
+
+    input{
+        width: 90%;
+        margin-top: 10px;
+    }
 }
